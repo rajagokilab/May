@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Sport Inc.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="sports equipments part 2\sports (56).png" style="border-radius: 50%;">
+ <!-- <script src="home.js" defer></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+}
+
+ /* Initial styles for header animation */
+ #main-header {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /* Mobile menu slide animation */
+        #mobile-menu {
+            transition: transform 0.5s ease;
+        }
+
+        /* Keyframes for blinking animation */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Apply blinking animation to Shop Sale button */
+        .blink {
+            animation: blink 1s infinite;
+        }
+/* SStrength */
+.light-blue {
+      color: #7EC8E3;
+      opacity: 0.6;
+    }
+
+    .circle-button-container {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #66aaff;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      border: 1px solid black;
+      margin: 20px auto;
+    }
+
+    .backgrnd {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+
+    .section-number-box {
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    .arrow-buttons {
+      background-color: #222;
+      color: #fff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      margin-left: auto;
+      border: none;
+    }
+
+    .arrow-buttons svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .heading-line,
+    .bottom-line,
+    .thick-line-right,
+    .thick-line-right1 {
+      height: 7px;
+      background-color: #222;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .circle-button-container {
+        width: 80px;
+        height: 80px;
+        font-size: 1em;
+      }
+
+      .section-title {
+        font-size: 1em;
+      }
+
+      .section-number-box {
+        font-size: 1.5em;
+      }
+
+      .arrow-buttons {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    /* SERVICE */
+    .containerser {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 40px auto;
+            align-items: flex-start;
+        }
+
+        .left-sectionser {
+            flex: 0 0 45%;
+            padding-right: 30px;
+            text-align: left;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .section-headingser {
+            font-size: clamp(2.5em, 5vw, 3.7em);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .heading-lineser {
+            background-color: #222;
+            height: 7px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            margin-bottom: 25px;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: lineGrow 0.8s ease-out 0.3s forwards;
+        }
+
+        .left-text-block,
+        .right-text-block {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: clamp(1rem, 2.5vw, 1.2em);
+            font-weight: bold;
+            transform: translateX(0%);
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.5s forwards;
+        }
+
+        .right-text-block {
+            margin-top: 70px;
+        }
+
+        .circle-button-container {
+            width: clamp(100px, 18vw, 150px);
+            height: clamp(100px, 18vw, 150px);
+            border-radius: 50%;
+            background-color: #66aaff;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(1.2em, 3vw, 1.8em);
+            font-weight: bold;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 30px auto;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: scaleUp 0.6s ease-out 0.7s forwards;
+        }
+
+        .bottom-lineser {
+            background-color: #222;
+            height: 7px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            margin-top: 40px;
+            transform: scaleX(0);
+            transform-origin: right;
+            animation: lineGrow 0.8s ease-out 0.3s forwards;
+        }
+
+        .right-sectionser {
+            flex: 0 0 55%;
+            padding-left: 30px;
+            padding-top: 60px;
+        }
+
+        .numbered-sectionser {
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(20px);
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        .numbered-sectionser:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .numbered-sectionser:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .section-headerser {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .backgrndser {
+            background-color: black;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-number-box {
+            color: #fff;
+            font-size: clamp(2em, 4vw, 3em);
+            font-weight: bold;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            padding: 8px 12px;
+            margin-right: 15px;
+        }
+        .section-number-box.text-white.m-2.bg-black {
+            color: white;
+            background-color: black;
+            margin: 0.5rem;
+            display: flex; /* Enable flex layout for inline elements */
+            align-items: center; /* Vertically align items */
+            gap: 10px; /* Add some space between number and text */
+        }
+        .section-number-box.text-white.m-2.bg-black > span {
+            font-size: 22px; /* Set the font size for the text */
+            font-weight: normal; /* Adjust font weight if needed */
+        }
+
+        .section-titleser,
+        .section-title {
+            font-size: clamp(1.2em, 3vw, 1.5em);
+            font-weight: bold;
+        }
+
+        .arrow-buttonsser,
+        .arrow-buttons {
+            background-color: #222;
+            color: #fff;
+            border-radius: 50%;
+            width: clamp(25px, 5vw, 30px);
+            height: clamp(25px, 5vw, 30px);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(1.4em, 3.5vw, 2.2em);
+            margin-left: auto;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            opacity: 0;
+            transform: scale(0.7);
+            animation: scaleUp 0.5s ease-out 0.8s forwards, blinkArrow 1.5s infinite alternate; /* Added blink animation */
+        }
+
+        .arrow-buttonsser:hover,
+        .arrow-buttons:hover {
+            animation-play-state: paused; /* Pause blink on hover if desired */
+        }
+
+        .arrow-buttonsser svg,
+        .arrow-buttons svg {
+            width: clamp(12px, 2.5vw, 16px);
+            height: clamp(12px, 2.5vw, 16px);
+            fill: currentColor;
+        }
+
+        .section-description-right {
+            color: #555;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: clamp(1.1rem, 2.8vw, 1.3em);
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.7s forwards;
+        }
+
+        .thick-line-rightser,
+        .thick-line-right1 {
+            background-color: #222;
+            height: 7px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: lineGrow 0.8s ease-out 0.6s forwards;
+        }
+
+        .containeri {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideInBottom 0.8s ease-out 1s forwards;
+        }
+
+        .colobs {
+            padding: 30px;
+        }
+
+        .containeri h3 {
+            font-size: clamp(2.5rem, 6vw, 52px);
+        }
+
+        .containeri p {
+            font-size: clamp(1.2rem, 3.5vw, 24px);
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInBottom {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes lineGrow {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes blinkArrow {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .containerser {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-sectionser,
+            .right-sectionser {
+                width: 80%;
+                padding-right: 0;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .section-headingser,
+            .heading-lineser,
+            .bottom-lineser,
+            .thick-line-rightser,
+            .thick-line-right1 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .section-headerser {
+                justify-content: center;
+            }
+
+            .section-number-box-container {
+                display: flex;
+                align-items: center;
+                margin-right: 15px;
+            }
+        }
+    /* players */
+    #container-alnasaar {
+      width: 95%;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border: 2px solid black;
+    }
+
+    .container-alnasaar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #ffffff;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      flex-wrap: wrap;
+    }
+
+    .container-alnasaar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-section {
+      flex: 1 1 100%;
+      padding: 10px 20px;
+      animation: fadeInLeft 0.5s ease forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .image-section {
+      flex: 1 1 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      animation: fadeInRight 0.5s ease forwards;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .club-logo img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .info-header {
+      font-size: 18px;
+      color: #3498db;
+    }
+
+    .club-name {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .club-description {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+
+    .pknow-more-button {
+      color: black;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      transition: box-shadow 0.3s ease, transform 0.1s ease;
+      background-color: #f0f0f0;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .pknow-more-button:hover {
+      background-color: #217dbb;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .pknow-more-button svg {
+      margin-left: 10px;
+    }
+
+    /* Responsive Tweaks */
+    @media (min-width: 768px) {
+      .container-alnasaar {
+        flex-direction: row;
+      }
+
+      .info-section,
+      .image-section {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .container-alnasaar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-section,
+      .image-section {
+        padding: 10px;
+        width: 100%;
+      }
+
+      .image-section img {
+        max-width: 90%;
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Card */
+    body {
+      font-family: 'Instrument Sans', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bannercard-container {
+      text-align: center;
+      background-color: #fff;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    .bannercard-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #00008B;
+    }
+
+    .bar {
+      height: 6px;
+      width: 40%;
+      background-color: #00008B;
+      margin: 1rem auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-top: 1rem;
+    }
+
+    .product-card p {
+      color: #48bb78;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .banner-text {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner-text {
+        font-size: 1.5rem;
+      }
+      .bar {
+        width: 60%;
+      }
+    }
+    /* FOOTER */
+     .logobarfoot {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .bannerfoot {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bottom-barfoot {
+      background-color: #343a40;
+      height: 10px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .logofoot-image {
+      height: 30px;
+      margin-right: 5px;
+    }
+
+    .image-stack {
+      position: relative;
+      animation: fadeIn 1s ease-in-out;
+      max-width: 100%;
+    }
+
+    .image-stack img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background-color: #060606;
+    }
+
+    .back-cardfoot {
+      position: absolute;
+      top: 10px;
+      left: 50px;
+      background-color: #5a5959;
+      width: 80%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .checkfoot {
+      background-color: #90bded;
+      font-size: 30px;
+      animation: slideIn 1s ease-in-out;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    .col-md-6 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background-color: #001f3f;
+      font-family: sans-serif;
+      color: #ffffff;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+      margin: 20px;
+      max-width: 300px;
+    }
+
+    .footer-section h3 {
+      color: #f5f7f5;
+      margin-bottom: 15px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .footer-section p,
+    .footer-section ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1.6;
+      font-size: 18px;
+      color: rgb(171, 168, 168);
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-section a {
+      color: rgb(171, 168, 168);
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      color: #ffffff;
+    }
+
+    .copyright {
+      background-color: #001f3f;
+      color: rgb(171, 168, 168);
+      text-align: center;
+      padding: 20px;
+      font-size: 1.2em;
+      border-top: 1px solid #c9dbed;
+      width: 100%;
+    }
+
+    .deal-title {
+      color: #001f3f;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 3.5rem;
+      animation: slideInLeft 1s ease-in-out;
+      text-align: center;
+    }
+
+    .deal-subtitle {
+      color: #001f3f;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      animation: slideInRight 1s ease-in-out;
+      text-align: center;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      background-color: #001f3f;
+      border-radius: 10px;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+      min-width: 80px;
+      animation: zoomIn 0.5s ease-in-out;
+    }
+
+    .countdown-item .font-weight-bold {
+      font-size: 2rem;
+      color: white;
+      animation: pulseNumber 1s infinite alternate;
+    }
+
+    .countdown-item small {
+      color: #adb5bd;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .shop-now-btn {
+      background-color: #001122;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.5s ease;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      animation: pulse 1s infinite alternate;
+    }
+
+    .shop-now-btn:hover {
+      background-color: #f1f4f7;
+      color: #001122;
+    }
+
+    @media (max-width: 768px) {
+      .text-md-left {
+        text-align: center !important;
+      }
+
+      .col-md-6:first-child {
+        padding-bottom: 20px;
+      }
+    }
+
+    /* Keyframes */
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(1);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes pulseNumber {
+      0% {
+        transform: scale(1.4);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+   .image-stack  {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    
+    </style>
+</head>
+<body>
+  <header id="main-header" class="bg-transparent py-8 fixed top-0 left-0 w-full z-10 transition-all duration-500 transform -translate-y-10 opacity-0">
+    <div class="container mx-auto px-9 flex justify-between items-center">
+        <div class="logo ml-0">
+            <a href="fhome.html" class="flex items-center">
+                <img src="sports equipments part 2\logo.png" alt="MK Sport Inc. Logo" class="mr-2 h-17">
+            </a>
+        </div>
+        <nav class="hidden md:block bg-black bg-opacity-70 rounded-md px-6 py-2 mt-0 ml-auto mr-4">
+            <ul class="flex items-center space-x-9">
+                <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                <li><a href="about.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="md:hidden text-orange-600 focus:outline-none" aria-label="Toggle Navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 transform translate-x-full">
+    <div class="bg-gray-900 w-80 h-full absolute right-0 p-6">
+        <div class="flex justify-end mb-4">
+            <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="block">
+            <ul class="space-y-8">
+                <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                <li><a href="about.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<main class="bg-cover bg-center bg-no-repeat" style="background-image: url('Sports Equipment/sports (6).png');">
+    <div class="container mx-auto px-12 py-60 text-center">
+        <h1 class="text-4xl sm:text-4xl md:text-4xl font-semibold text-white mb-4">END OF SEASON SALE</h1>
+        <p class="text-lg sm:text-sm text-gray-200 font-semibold mb-8 max-w-3xl mx-auto">SAVE UP TO 60% ON BEST SELLING BATS, NETS, AND BALLS FOR SPECIFIC SPORTS</p>
+        <a href="fequipment.html" class="bg-yellow-500 hover:bg-white text-black font-semibold py-3 px-6 rounded-tl-lg rounded-br-lg rounded-bl-lg rounded-tr-lg transition duration-300 text-lg blink" style="text-decoration: none;">Shop Sale</a>
+    </div>
+</main>
+    <!-- Strength destination -->
+    <div class="container-fluid py-5 bg-black text-white">
+        <div class="text-center mb-5">
+          <h2 class="text-primary ">BEST DESTINATIONS FOR SPORTS EQUIPMENT AROUND THE WORLD</h2>
+        </div>
+    
+        <div class="row align-items-center justify-content-center px-3">
+          <!-- Left Column -->
+          <div class="col-md-6 mb-4 text-center text-md-start">
+            <h2 class="fw-bold" style="font-size: 2.5rem;">Strength, Speed and the Pursuit of Better</h2>
+            <div class="row text-center mt-4">
+              <div class="col-4">
+                <p class="fs-4 fw-bold mb-1">10M+</p>
+                <p class="text-primary">User active</p>
+              </div>
+              <div class="col-4">
+                <p class="fs-4 fw-bold mb-1">30+</p>
+                <p class="text-primary">Country</p>
+              </div>
+              <div class="col-4">
+                <p class="fs-4 fw-bold mb-1">$50L+</p>
+                <p class="text-primary">Transaction</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Right Column -->
+          <div class="col-md-6 text-center text-md-start">
+            <p class="light-blue">
+              MK Sport specializes in designing and manufacturing sport equipment while creating bespoke training facilities.
+              Partnering with coaches, ground owners, and athletes, we enhance training spaces to elevate performance.
+            </p>
+            <button class="btn btn-primary mt-3" onclick="navigateToPage()">Find out more</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Services Section -->
+      <div class="containerser">
+        <div class="left-sectionser">
+            <h4 class="section-headingser">SERVICES WE PROVIDE<br>AND WE OFFER</h4>
+            <div class="heading-lineser"></div>
+            <p class="left-text-block">
+                I will help you with finding a solution<br>
+                and solve your problem.
+            </p>
+            <div class="circle-button-container">
+                LET'S<br>TALK
+            </div>
+            <p class="right-text-block">
+                I will help you with finding a solution<br>
+                and solve your problem.
+            </p>
+            <div class="bottom-lineser"></div>
+        </div>
+
+        <div class="right-sectionser">
+            <div class="numbered-sectionser">
+                <div class="section-headerser">
+                    <div class="backgrndser">
+                        <div class="section-number-box">01</div>
+                        <h2 class="section-titleser">Sport equipment</h2>
+                    </div>
+                    <button class="arrow-buttonsser" onclick="navigateToPage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="section-description-right">
+                    With a growing client list and thousands of installs to look back on,
+                    the company is positioned for continued growth and innovation for
+                    2024 and beyond.
+                </p>
+                <div class="thick-line-right1"></div>
+            </div>
+
+            <div class="numbered-sectionser">
+                <div class="section-headerser">
+                    <div class="section-number-box-container">
+                        <div class="section-number-box text-white m-2 bg-black ">02 <span style="font-size: 22px;">Equipment Replacement</span></div>
+                    </div>
+                    <button class="arrow-buttons" onclick="navigateToPage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="thick-line-rightser"></div>
+            </div>
+
+            <div class="numbered-sectionser">
+                <div class="section-headerser">
+                    <div class="backgrndser">
+                        <div class="section-number-box">03</div>
+                        <h2 class="section-titleser">Sponsors for sports events</h2>
+                    </div>
+                    <button class="arrow-buttons" onclick="navigateToPage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="thick-line-rightser"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="containeri">
+        <div class="colobs">
+            <h3 style="font-size:clamp(2.5rem, 6vw, 52px);font-weight: bold; text-align: center;">OUR COLOBS AND TIE-UPS</h3>
+            <p style="font-size:clamp(1.2rem, 3.5vw, 24px); text-align: center;">Take a look at some of our tie-up companies and Teams</p>
+        </div>
+    </div>
+<!-- players -->
+  <!-- AL-NASSAR -->
+  <section id="container-alnasaar">
+    <div class="container-alnasaar">
+      <div class="image-section">
+        <img src="sports equipments part 2/sports (24).png" alt="Cristiano Ronaldo" />
+      </div>
+      <div class="info-section">
+        <div class="club-logo">
+          <img src="sports equipments part 2/sports (136).png" alt="Al-Nassr FC Logo" />
+        </div>
+        <p class="info-header">- FOOTBALL</p>
+        <h2 class="club-name">AL-NASSAR</h2>
+        <p class="club-description">
+          Al-Nassr Football Club ("Victory Football Club") is a professional football club based in Riyadh, Saudi Arabia. The club competes in the Saudi Pro League, the top tier of Saudi football.
+        </p>
+        <a href="about.html" class="pknow-more-button">
+          KNOW MORE
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.146-3.147a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM INDIA -->
+  <section id="container-alnasaar">
+    <div class="container-alnasaar">
+      <div class="image-section">
+        <img src="Sports Equipment/cricketteam.png" alt="Indian Cricket Team" />
+      </div>
+      <div class="info-section">
+        <div class="club-logo">
+          <img src="sports equipments part 2/sports (142).png" alt="Indian Cricket Team Logo" />
+        </div>
+        <p class="info-header">- CRICKET</p>
+        <h2 class="club-name">TEAM INDIA</h2>
+        <p class="club-description">
+          The India men's national cricket team, also known as the Men in Blue, represents India in international cricket. It is governed by the Board of Control for Cricket in India (BCCI).
+        </p>
+        <a href="about.html" class="pknow-more-button">
+          KNOW MORE
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.146-3.147a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIAN VOLLEYBALL -->
+  <section id="container-alnasaar">
+    <div class="container-alnasaar">
+      <div class="image-section">
+        <img src="Sports Equipment/indianvolleyboll.png" alt="Indian Volleyball Team" />
+      </div>
+      <div class="info-section">
+        <div class="club-logo">
+          <img src="sports equipments part 2/volleyballlogo.png" alt="Indian Volleyball Logo" />
+        </div>
+        <p class="info-header">- VOLLEYBALL</p>
+        <h2 class="club-name">INDIAN VOLLEYBALL CLUB</h2>
+        <p class="club-description">
+          The India men's national volleyball team represents the country in international competitions. It is overseen by the Volleyball Federation of India.
+        </p>
+        <a href="about.html" class="pknow-more-button">
+          KNOW MORE
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.146-3.147a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Card -->
+  <div class="bannercard-container">
+    <div class="bannercard-text">Our Best Sellers</div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <a href="fcricket.html">
+        <img src="/sports equipments part 2/Cricketbat2.png" alt="Cricket Bat">
+      </a>
+      <h3>Cricket Bat</h3>
+      <p>₹ 100</p>
+    </div>
+
+    <div class="product-card">
+      <a href="ftennis.html">
+        <img src="/sports equipments part 2/Tennis Bat.png" alt="Tennis Bat">
+      </a>
+      <h3>Tennis Bat</h3>
+      <p>₹ 500</p>
+    </div>
+
+    <div class="product-card">
+      <a href="ffootball.html">
+        <img src="/sports equipments part 3/Football.png" alt="Football">
+      </a>
+      <h3>Foot Ball</h3>
+      <p>₹ 600</p>
+    </div>
+
+    <div class="product-card">
+      <a href="fcricket.html">
+        <img src="/Sports Equipment/cricketbat.png" alt="Cricket Bat">
+      </a>
+      <h3>Cricket Bat</h3>
+      <p>₹ 150</p>
+    </div>
+
+    <div class="product-card">
+      <a href="ftabletennis.html">
+        <img src="/sports equipments part 2/Net.png" alt="Net">
+      </a>
+      <h3>Net</h3>
+      <p>₹ 1000</p>
+    </div>
+
+    <div class="product-card">
+      <a href="fhockey-bat.html">
+        <img src="/sports equipments part 2/Hockeybat.png" alt="Hockey Bat">
+      </a>
+      <h3>Hockey Bat</h3>
+      <p>₹ 1100</p>
+    </div>
+  </div>
+<!-- FOOTER -->
+<div class="logobarfoot">
+  <div class="bannerfoot">
+    <div></div>
+    <div class="logofoot-containerfoot">
+      <img src="\sports equipments part 2\logo.png" alt="MK Sporting Logo" class="logofoot-image">
+      <span class="logofoot-text"></span>
+    </div>
+    <div class="bottom-barfoot"></div>
+  </div>
+</div>
+
+<div class="checkfoot container-fluid p-0">
+  <div class="row align-items-center m-0">
+    <div class="col-md-6 text-center text-md-left p-4 p-md-5">
+      <h2 class="deal-title">Deal Of The Day</h2>
+      <p class="deal-subtitle">GO...GET your Equipments on special offers only on mukesh equipment website</p>
+      <div class="countdown d-flex justify-content-center">
+        <div class="countdown-item">
+          <div id="days" class="font-weight-bold">03</div>
+          <small class="text-muted-light">Day</small>
+        </div>
+        <div class="countdown-item">
+          <div id="hours" class="font-weight-bold">08</div>
+          <small class="text-muted-light">Hour</small>
+        </div>
+        <div class="countdown-item">
+          <div id="minutes" class="font-weight-bold">09</div>
+          <small class="text-muted-light">Minute</small>
+        </div>
+      </div>
+      <button class="btn shop-now-btn rounded-0 shadow-sm" id="shopNowBtn">SHOP NOW</button>
+    </div>
+    <div class="col-md-6 p-4">
+      <div class="image-stack">
+        <div class="back-cardfoot"></div>
+        <img src="\sports equipments part 3\sports (19).png" alt="Cristiano Ronaldo celebrating" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-container">
+  <div class="footer-section">
+    <h3>Equipment</h3>
+    <p>MK Sport, we specialize in designing and manufacturing sport equipment while creating bespoke training facilities.</p>
+    <p>Partnering with coaches, ground owners, and athletes, we enhance training spaces to elevate performance.</p>
+  </div>
+  <div class="footer-section">
+    <h3>Company</h3>
+    <ul>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="about.html">Blog</a></li>
+      <li><a href="about.html">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Need Help?</h3>
+    <ul>
+      <li><a href="about.html">Contact Us</a></li>
+      <li><a href="about.html">Shipping Services</a></li>
+      <li><a href="fcart.html">Payment Options</a></li>
+      <li><a href="fcart.html">Returns & Exchanges</a></li>
+      <li><a href="fcart.html">Unsubscribe</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Follow Us</h3>
+    <ul>
+      <li><a href="fhome.html">Instagram</a></li>
+      <li><a href="fhome.html">Facebook</a></li>
+      <li><a href="fhome.html">Twitter</a></li>
+      <li><a href="fhome.html">Snapchat</a></li>
+      <li><a href="fhome.html">Pinterest</a></li>
+    </ul>
+  </div>
+</div>
+<div class="copyright">
+  Copyright @ Mukesh2025. All Rights Reserved.
+</div>
+   
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerBtn = document.getElementById("hamburger-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeMenuBtn = document.getElementById("close-menu-btn");
+            const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+            function toggleMobileMenu() {
+                mobileMenu.classList.remove("hidden");
+                setTimeout(() => {
+                    mobileMenu.classList.toggle("translate-x-full");
+                }, 10); // allow DOM paint
+            }
+
+            hamburgerBtn.addEventListener("click", toggleMobileMenu);
+            closeMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+                setTimeout(() => {
+                    mobileMenu.classList.add("hidden");
+                }, 500); // match duration
+            });
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("translate-x-full");
+                    setTimeout(() => {
+                        mobileMenu.classList.add("hidden");
+                    }, 500);
+                });
+            });
+
+            // Animate header on page load
+            const mainHeader = document.getElementById("main-header");
+            setTimeout(() => {
+                mainHeader.classList.remove("-translate-y-10", "opacity-0");
+                mainHeader.classList.add("translate-y-0", "opacity-100");
+            }, 100);
+        });   
+//   stregnth
+function navigateToPage() {
+            // Replace with actual navigation logic
+            alert("Navigation triggered.");
+        }
+        document.getElementById('shopNowBtn').onclick = function (navigateToPage) {
+      window.location.href = 'fequipment.html';
+    }
+// sticky header
+    const header = document.getElementById('main-header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('bg-gray-900', 'bg-opacity-40', 'shadow-md');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-gray-800', 'bg-opacity-40', 'shadow-md');
+        header.classList.add('bg-transparent');
+    }
+});
+    // FOOTER
+    function updateCountdown() {
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 3);
+      targetDate.setHours(8, 9, 59, 999);
+
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+      document.getElementById('days').innerText = String(days).padStart(2, '0');
+      document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+
+      if (difference < 0) {
+        clearInterval(countdownInterval);
+        document.querySelector('.countdown').innerHTML = '<div class="text-danger">Deal Ended!</div>';
+      }
+    }
+
+    document.getElementById('shopNowBtn').onclick = function () {
+      window.location.href = 'fequipment.html';
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+</html>

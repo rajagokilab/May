@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKsport equipment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="sports equipments part 2\sports (56).png" style="border-radius: 50%;">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="fequipment.css">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        #main-header {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /* Mobile menu slide animation */
+        #mobile-menu {
+            transition: transform 0.5s ease;
+        }
+
+        /* Keyframes for blinking animation */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Apply blinking animation to Shop Sale button */
+        .blink {
+            animation: blink 1s infinite;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header id="main-header" class="bg-transparent py-8 fixed top-0 left-0 w-full z-10 transition-all duration-500 transform -translate-y-10 opacity-0">
+        <div class="container mx-auto px-9 flex justify-between items-center">
+            <div class="logo ml-0">
+                <a href="fhome.html" class="flex items-center">
+                    <img src="sports equipments part 2\logo.png" alt="MK Sport Inc. Logo" class="mr-2 h-17">
+                </a>
+            </div>
+            <nav class="hidden md:block bg-black bg-opacity-70 rounded-md px-6 py-2 mt-0 ml-auto mr-4">
+                <ul class="flex items-center space-x-9">
+                    <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                    <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                    <li><a href="about.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-orange-600 focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 transform translate-x-full">
+        <div class="bg-gray-900 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-8">
+                    <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                    <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                    <li><a href="about.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="bg-cover bg-center bg-no-repeat" style="background-image: url('/Sports Equipment/FOOTBALLTEAM.png');">
+        <div class="container mx-auto px-12 py-60 text-center">
+            <h1 class="text-4xl sm:text-4xl md:text-4xl font-semibold text-white mb-4">WHAT ARE YOU LOOKING FOR</h1>
+        </div>
+    </main>
+  
+      <div class="popular m-6 ">
+        <h2 class="mb-4 ">Popular Sport Equipment</h2>
+    </div>
+
+    <div class="container-equip" id="equipmentContainer">
+        </div>
+
+
+        <div class="popular m-6">
+            <h2 class="mb-4 ">Sport Equipment catagory</h2>
+        </div>
+    
+        <div class="container-equip" id="sportequipmentContainer">
+            </div>
+
+            <div class="popular m-6">
+                <h2 class="mb-4 ">Sport Equipment catagory</h2>
+            </div>
+        
+            <div class="container-equip" id="sportsequipmentContainer">
+                </div>
+<!-- FOOTER -->
+<div class="logobarfoot">
+    <div class="bannerfoot">
+      <div></div>
+      <div class="logofoot-containerfoot">
+        <img src="\sports equipments part 2\logo.png" alt="MK Sporting Logo" class="logofoot-image">
+        <span class="logofoot-text"></span>
+      </div>
+      <div class="bottom-barfoot"></div>
+    </div>
+  </div>
+  
+  <div class="checkfoot container-fluid p-0">
+    <div class="row align-items-center m-0">
+      <div class="col-md-6 text-center text-md-left p-4 p-md-5">
+        <h2 class="deal-title">Deal Of The Day</h2>
+        <p class="deal-subtitle">GO...GET your Equipments on special offers only on mukesh equipment website</p>
+        <div class="countdown d-flex justify-content-center">
+          <div class="countdown-item">
+            <div id="days" class="font-weight-bold">03</div>
+            <small class="text-muted-light">Day</small>
+          </div>
+          <div class="countdown-item">
+            <div id="hours" class="font-weight-bold">08</div>
+            <small class="text-muted-light">Hour</small>
+          </div>
+          <div class="countdown-item">
+            <div id="minutes" class="font-weight-bold">09</div>
+            <small class="text-muted-light">Minute</small>
+          </div>
+        </div>
+        <button class="btn shop-now-btn rounded-0 shadow-sm" id="shopNowBtn">SHOP NOW</button>
+      </div>
+      <div class="col-md-6 p-4">
+        <div class="image-stack">
+          <div class="back-cardfoot"></div>
+          <img src="\sports equipments part 3\sports (19).png" alt="Cristiano Ronaldo celebrating" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Equipment</h3>
+      <p>MK Sport, we specialize in designing and manufacturing sport equipment while creating bespoke training facilities.</p>
+      <p>Partnering with coaches, ground owners, and athletes, we enhance training spaces to elevate performance.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Need Help?</h3>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Shipping Services</a></li>
+        <li><a href="#">Payment Options</a></li>
+        <li><a href="#">Returns & Exchanges</a></li>
+        <li><a href="#">Unsubscribe</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Snapchat</a></li>
+        <li><a href="#">Pinterest</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="copyright">
+    Copyright @ Mukesh2025. All Rights Reserved.
+  </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerBtn = document.getElementById("hamburger-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeMenuBtn = document.getElementById("close-menu-btn");
+            const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+            function toggleMobileMenu() {
+                mobileMenu.classList.remove("hidden");
+                setTimeout(() => {
+                    mobileMenu.classList.toggle("translate-x-full");
+                }, 10); // allow DOM paint
+            }
+
+            hamburgerBtn.addEventListener("click", toggleMobileMenu);
+            closeMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+                setTimeout(() => {
+                    mobileMenu.classList.add("hidden");
+                }, 500); // match duration
+            });
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("translate-x-full");
+                    setTimeout(() => {
+                        mobileMenu.classList.add("hidden");
+                    }, 500);
+                });
+            });
+
+            // Animate header on page load
+            const mainHeader = document.getElementById("main-header");
+            setTimeout(() => {
+                mainHeader.classList.remove("-translate-y-10", "opacity-0");
+                mainHeader.classList.add("translate-y-0", "opacity-100");
+            }, 100);
+        });
+
+        // card
+
+        const equipmentData = [
+    {
+        imageSrc: "/sports equipments part 2/footballleghigher.png",
+        text: "Foot Ball",
+        link: "ffootball.html"
+    },
+    {
+        imageSrc: "/Sports Equipment/Cricketballequip.png",
+        text: "Cricket",
+        link: "fcricket.html"
+    },
+    {
+        imageSrc: "/sports equipments part 2/golfwomen.png",
+        text: "Golf",
+        link: "fgolf.html"
+    },
+    {
+        imageSrc: "Sports Equipment/tenniswomen.png",
+        text: "Tennis",
+        link: "ftennis.html"
+    },
+    // Add more equipment data with their respective links
+];
+
+const equipmentContainer = document.getElementById('equipmentContainer');
+
+equipmentData.forEach(equipment => {
+    const equipmentCard = document.createElement('div');
+    equipmentCard.classList.add('equipment-card');
+    equipmentCard.addEventListener('click', () => {
+        window.location.href = equipment.link;
+    });
+
+    const image = document.createElement('img');
+    image.src = equipment.imageSrc;
+    image.alt = equipment.text; // Add alt text for accessibility
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('image-text-overlay');
+    overlay.textContent = equipment.text;
+
+    equipmentCard.appendChild(image);
+    equipmentCard.appendChild(overlay);
+    equipmentContainer.appendChild(equipmentCard);
+});
+// 2nd Equip
+const sportequipmentData = [
+    {
+        imageSrc: "Sports Equipment/badmintoncok.png",
+        text: "Badminton",
+        link: "badminton.html"
+    },
+    {
+        imageSrc: "Sports Equipment/0boxcheck.png",
+        text: "Boxing",
+        link: "boxing.html"
+    },
+    {
+        imageSrc: "sports equipments part 2/hockeyplay.png",
+        text: "Hockey",
+        link: "fhockey.html"
+    },
+    {
+        imageSrc: "sports equipments part 2/basketballhighr.png",
+        text: "Basket Ball",
+        link: "basketball.html"
+    },
+    // Add more equipment data with their respective links
+];
+const sportContainer = document.getElementById('sportequipmentContainer');
+
+sportequipmentData.forEach(equipment => {
+const sportequipmentCard = document.createElement('div');
+sportequipmentCard.classList.add('equipment-card');
+sportequipmentCard.addEventListener('click', () => {
+window.location.href = equipment.link;
+});
+
+const images = document.createElement('img');
+images.src = equipment.imageSrc;
+images.alt = equipment.text; // Add alt text for accessibility
+
+const overlay = document.createElement('div');
+overlay.classList.add('image-text-overlay');
+overlay.textContent = equipment.text;
+
+sportequipmentCard.appendChild(images);
+sportequipmentCard.appendChild(overlay);
+sportequipmentContainer.appendChild(sportequipmentCard);
+});
+// 3row
+const sportsequipmentData = [
+    {
+        imageSrc: "sports equipments part 2/tabletennismen.png",
+        text: "Table Tennis",
+        link: "ftabletennis.html"
+    },
+    {
+        imageSrc: "sports equipments part 3/sports (34).png",
+        text: "Base Ball",
+        link: "baseball.html"
+    },
+    {
+        imageSrc: "sports equipments part 2/gymequip.png",
+        // text: "Gym",
+        link: "fgym.html"
+    },
+    {
+        imageSrc: "sports equipments part 2/chesshorse.png",
+        text: "Chess",
+        link: "fchess.html"
+    },
+    // Add more equipment data with their respective links
+];
+const sportsContainer = document.getElementById('sportsequipmentContainer');
+
+sportsequipmentData.forEach(equipment => {
+const sportsequipmentCard = document.createElement('div');
+sportsequipmentCard.classList.add('equipment-card');
+sportsequipmentCard.addEventListener('click', () => {
+window.location.href = equipment.link;
+});
+
+const imagess = document.createElement('img');
+imagess.src = equipment.imageSrc;
+imagess.alt = equipment.text; // Add alt text for accessibility
+
+const overlay = document.createElement('div');
+overlay.classList.add('image-text-overlay');
+overlay.textContent = equipment.text;
+
+sportsequipmentCard.appendChild(imagess);
+sportsequipmentCard.appendChild(overlay);
+sportsequipmentContainer.appendChild(sportsequipmentCard);
+
+});
+// sticky header
+// sticky header
+const header = document.getElementById('main-header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('bg-gray-900', 'bg-opacity-40', 'shadow-md');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-gray-800', 'bg-opacity-40', 'shadow-md');
+        header.classList.add('bg-transparent');
+    }
+});
+
+// footer
+
+// JavaScript for the countdown
+function updateCountdown() {
+          const targetDate = new Date();
+          targetDate.setDate(targetDate.getDate() + 3); // Example: Deal ends in 3 days
+          targetDate.setHours(8, 9, 59, 999); // Example: Ends at 08:09:59
+
+          const now = new Date().getTime();
+          const difference = targetDate - now;
+
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+          document.getElementById('days').innerText = String(days).padStart(2, '0');
+          document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+          document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+
+          if (difference < 0) {
+              clearInterval(countdownInterval);
+              document.querySelector('.countdown').innerHTML = '<div class="text-danger">Deal Ended!</div>';
+              document.getElementById('shopNowBtn').disabled = true;
+          }
+      }
+
+      const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+          
+        <!-- <script src="\equipment.js"></script> -->
+        <!-- <script src="home.js"></script> -->
+    
+</body>
+</html>
