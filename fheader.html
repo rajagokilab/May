@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Animations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="sports equipments part 2\sports (56).png" style="border-radius: 50%;">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Initial styles for header animation */
+        #main-header {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /* Mobile menu slide animation */
+        #mobile-menu {
+            transition: transform 0.5s ease;
+        }
+
+        /* Keyframes for blinking animation */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Apply blinking animation to Shop Sale button */
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="main-header" class="bg-transparent py-8 fixed top-0 left-0 w-full z-10 transition-all duration-500 transform -translate-y-10 opacity-0">
+        <div class="container mx-auto px-9 flex justify-between items-center">
+            <div class="logo ml-0">
+                <a href="fhome.html" class="flex items-center">
+                    <img src="sports equipments part 2\logo.png" alt="MK Sport Inc. Logo" class="mr-2 h-17">
+                </a>
+            </div>
+            <nav class="hidden md:block bg-black bg-opacity-70 rounded-md px-6 py-2 mt-0 ml-auto mr-4">
+                <ul class="flex items-center space-x-9">
+                    <li><a href="#" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                    <li><a href="#" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                    <li><a href="#" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-orange-600 focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 transform translate-x-full">
+        <div class="bg-gray-900 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-8">
+                    <li><a href="#" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                    <li><a href="#" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                    <li><a href="#" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="bg-cover bg-center bg-no-repeat" style="background-image: url('Sports Equipment/sports (6).png');">
+        <div class="container mx-auto px-12 py-60 text-center">
+            <h1 class="text-4xl sm:text-4xl md:text-4xl font-semibold text-white mb-4">END OF SEASON SALE</h1>
+            <p class="text-lg sm:text-sm text-gray-200 font-semibold mb-8 max-w-3xl mx-auto">SAVE UP TO 60% ON BEST SELLING BATS, NETS, AND BALLS FOR SPECIFIC SPORTS</p>
+            <!-- <a href="#" class="bg-yellow-500 hover:bg-white text-black font-semibold py-3 px-6 rounded-tl-lg rounded-br-lg rounded-bl-lg rounded-tr-lg transition duration-300 text-lg blink" style="text-decoration: none;">Shop Sale</a> -->
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerBtn = document.getElementById("hamburger-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeMenuBtn = document.getElementById("close-menu-btn");
+            const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+            function toggleMobileMenu() {
+                mobileMenu.classList.remove("hidden");
+                setTimeout(() => {
+                    mobileMenu.classList.toggle("translate-x-full");
+                }, 10); // allow DOM paint
+            }
+
+            hamburgerBtn.addEventListener("click", toggleMobileMenu);
+            closeMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+                setTimeout(() => {
+                    mobileMenu.classList.add("hidden");
+                }, 500); // match duration
+            });
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("translate-x-full");
+                    setTimeout(() => {
+                        mobileMenu.classList.add("hidden");
+                    }, 500);
+                });
+            });
+
+            // Animate header on page load
+            const mainHeader = document.getElementById("main-header");
+            setTimeout(() => {
+                mainHeader.classList.remove("-translate-y-10", "opacity-0");
+                mainHeader.classList.add("translate-y-0", "opacity-100");
+            }, 100);
+        });
+    </script>
+</body>
+</html>

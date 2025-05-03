@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MKsport Football</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="sports equipments part 2\sports (56).png" style="border-radius: 50%;">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="ffooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Initial styles for header animation */
+        #main-header {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /* Mobile menu slide animation */
+        #mobile-menu {
+            transition: transform 0.5s ease;
+        }
+
+        /* Keyframes for blinking animation */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Apply blinking animation to Shop Sale button */
+        .blink {
+            animation: blink 1s infinite;
+        }
+        /* .main-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 100vh;
+            background-image: url('sports equipments part 3/sports (43).png');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-family: "Lora", serif;
+            cursor: pointer;
+        } */
+        .main-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    background-image: url('Sports Equipment/baseballhlemt.png');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Lora", serif;
+    cursor: pointer;
+    transition: background-size 0.3s ease, background-position 0.3s ease;
+    padding: 20px; /* Add padding to the container */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        background-size: cover;
+        background-position: center;
+        min-height: 75vh;
+        justify-content: center; /* Center content on smaller screens */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        justify-content: center; /* Center content on mobile */
+        align-items: center;
+    }
+}
+
+.content-wrapper {
+    color: white;
+    padding: 20px;
+    border-radius: 0;
+    text-align: center;
+    max-width: 100%; /* Make content width responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Allow items to wrap to multiple lines */
+    background-color: rgb(255, 254, 254);
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+    animation: slideInLeft 1s ease-out;
+    width: 100%; /* Make stats container width responsive */
+}
+
+.stat-item {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1 1 auto; /* Allow items to grow and shrink */
+    min-width: 100px; /* Ensure a minimum width for each item */
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+}
+
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align:center;
+            background-color: black;
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: normal;
+            color: black;
+            text-align: center;
+        }
+        .stat-labels{
+            font-size: 20px;
+            font-weight: normal;
+            color: black;
+            text-align: center;
+        }
+        .stat-item:hover, .stat-items:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .containercart {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            max-width: 900px;
+            width: 95%;
+            padding: 25px;
+            min-height: 500px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-containercart {
+            flex: 1.2;
+            margin-right: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-containercart:hover {
+            transform: scale(1.06);
+        }
+
+        .image-containercart img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .details-containerball {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+
+        .breadcrumbs {
+            color: #777;
+            font-size: 1em;
+            margin-bottom: 12px;
+        }
+
+        .product-titleball {
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+
+        .ratingball {
+            color: #555;
+            font-size: 1em;
+            margin-bottom: 12px;
+        }
+
+        .price-stockball {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .stock {
+            background-color: #c8e6c9;
+            color: #1b5e20;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-right: 12px;
+        }
+
+        .price {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .free-shippingball {
+            color: #4caf50;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            animation: popInOut 1.5s infinite alternate;
+        }
+
+        .free-shippingball::before {
+            content: "\25CF";
+            color: #4caf50;
+            font-size: 1em;
+            margin-right: 8px;
+        }
+
+        .quantity-selectorball {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .quantity-labelball {
+            margin-right: 15px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .quantity-inputball {
+            display: flex;
+            border: 1.5px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .quantity-inputball button {
+            background-color: #f0f0f0;
+            color: #333;
+            border: none;
+            padding: 10px 12px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .quantity-inputball button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .quantity-inputball input[type="number"] {
+            width: 50px;
+            text-align: center;
+            border: none;
+            border-left: 1.5px solid #ccc;
+            border-right: 1.5px solid #ccc;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .add-to-cart-areaball {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .add-to-cart-buttonball {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .add-to-cart-buttonball:active {
+            background-color: #222;
+            transform: scale(0.98);
+        }
+
+        .wishlist-buttonball {
+            background-color: transparent;
+            border: 1.5px solid #ccc;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #555;
+            transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .wishlist-buttonball.active,
+        .wishlist-buttonball:active {
+            color: #e91e63;
+            transform: scale(0.95);
+        }
+
+        .free-shipping-noteball {
+            color: #777;
+            font-size: 1em;
+            margin-top: 6px;
+        }
+
+        .share-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #555;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .share-icon:hover {
+            transform: scale(1.15);
+        }
+
+        .free-shipping-popupball {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background-color: #4caf50;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .free-shipping-popupball.show {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        .free-shipping-popupball button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            position: absolute;
+            top: 8px;
+            right: 12px;
+        }
+
+        .add-to-cart-popupball {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+        }
+
+        .add-to-cart-popupball.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-8px);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0s;
+        }
+
+        @keyframes popInOut {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .containercart {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .image-containercart {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            .add-to-cart-areaball {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .add-to-cart-buttonball {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .containercart {
+                padding: 15px;
+            }
+
+            .free-shipping-noteball {
+                font-size: 0.9em;
+            }
+        }
+
+        /* DETAILS */
+
+        .textcontainer {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-left: 80px;
+            font-family: "Instrument Sans", sans-serif;
+            font-size: 22px;
+            color: black;
+        }
+        @media (max-width: 768px){
+            .textcontainer{
+                margin-left: 0px;
+            }
+        }
+
+        .detail-section, .key-features-section, .reviews-section {
+            margin-bottom: 20px;
+        }
+
+        .detail-section h2, .key-features-section h2, .reviews-section h2 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .key-features-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .key-features-list li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .reviews-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .rating-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .review-count {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .write-review-button {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            background-color: transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .write-review-button:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+
+        .reviewcontainer {
+            /* background-color: #eae6e6; */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            font-family: "Instrument Sans", sans-serif;
+            font-size: 18px;
+            margin-left: 80px;
+        }
+        @media (max-width: 768px){
+            .reviewcontainer{
+                margin-left: 0px;
+            }
+        }
+
+        .review {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            transition: transform 0.3s ease, opacity 0.6s ease;
+        }
+
+        .review:last-child {
+            border-bottom: none;
+        }
+
+        .profile-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .review-details {
+            flex-grow: 1;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .review-date {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .rating {
+            margin-left: auto;
+            color: #ffc107;
+            font-size: 1.2em;
+        }
+
+        .rating svg {
+            fill: currentColor;
+            stroke: currentColor;
+            stroke-width: 1;
+        }
+
+        .rating svg:last-child {
+            fill: none;
+        }
+
+        .similar {
+            font-family: "Instrument Sans", sans-serif;
+            margin-left: 80px;
+            font-size: 25px;
+        }
+        @media (max-width: 768px){
+            .similar{
+                margin-left: 0px;
+            }
+        }
+
+        .products {
+            color: gray;
+        }
+        /* similar card */
+        .similar {
+        padding: 20px;
+        /* text-align: center; */
+        }
+        
+        .similar h2 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 10px;
+        }
+        
+        .products {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 20px;
+        }
+        
+        #equipmentfoot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+        }
+        @media (max-width: 768px){
+            #equipmentfoot{
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .equipmentfoot {
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        /* Added transition */
+        }
+        
+        .equipmentfoot:hover {
+        transform: translateY(-5px);
+        /* Added slight vertical movement on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        /* Added increased shadow on hover */
+        }
+        
+        .equipmentfoot img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        }
+        
+        .equipmentfoot h3 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #333;
+        }
+        
+        .equipmentfoot p {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: #3deb09;
+        font-weight: bold;
+        }
+        
+        .equipmentfoot .price {
+        font-weight: bold;
+        
+        }
+        
+        .equipmentfoot button {
+        background-color: #515252;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+        }
+        
+        .equipmentfoot button:hover {
+        background-color: #edeff1;
+        color: black;
+        }
+        
+        .equipmentfoot span.rounded-full {
+            border-radius: 24px;
+        }
+        .equipmentfoot span.bg-green-500{
+            background-color: #00ff00;
+        }
+        
+        @media (max-width: 768px) {
+        #equipmentfoot {
+            grid-template-columns: 1fr;
+        }
+        .equipmentfoot img {
+            height: auto;
+        }
+        }
+        
+        .flex-container {
+        display: flex;
+        justify-content: space-between; /* Pushes elements to the edges */
+        align-items: stretch; /* Makes items stretch to equal height */
+        }
+        
+        .left {
+        flex: 1; /* Allow left to take up available space */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Space out content within left */
+        }
+        
+        .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Align buttons to the bottom */
+        margin-left: 10px; /* Add some space between left and right */
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header" class="bg-transparent py-8 fixed top-0 left-0 w-full z-10 transition-all duration-500 transform -translate-y-10 opacity-0">
+        <div class="container mx-auto px-9 flex justify-between items-center">
+            <div class="logo ml-0">
+                <a href="fhome.html" class="flex items-center">
+                    <img src="sports equipments part 2\logo.png" alt="MK Sport Inc. Logo" class="mr-2 h-17">
+                </a>
+            </div>
+            <nav class="hidden md:block bg-black bg-opacity-70 rounded-md px-6 py-2 mt-0 ml-auto mr-4">
+                <ul class="flex items-center space-x-9">
+                    <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                    <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                    <li><a href="fabout.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-blue-600 focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 transform translate-x-full">
+        <div class="bg-gray-900 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-8">
+                    <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                    <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                    <li><a href="fabout.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div>680</div>
+                    <div class="stat-label">Award Winning</div>
+                </div>
+                <div class="stat-item">
+                    <div>8K+</div>
+                    <div class="stat-label">Happy Customer</div>
+                </div>
+                <div class="stat-item">
+                    <div>500+</div>
+                    <div class="stat-label">Equipments Ready</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cart -->
+    <div class="containercart">
+        <div class="image-containercart">
+            <div class="breadcrumbs" style="text-align: center;">Equipment > Classic Football</div>
+            <img src="sports equipments part 3/Football.png" alt="Adidas World Cup 2022 Football">
+        </div>
+        <div class="details-containerball">
+            <div style="position: relative;">
+                <div class="share-icon"><i class="fas fa-share-alt"></i></div>
+            </div>
+            <h1 class="product-titleball">Classic Football</h1>
+            <div class="ratingball">
+                <i class="fas fa-star" style="color: #ffc107;"></i> 4.2 - 54 Reviews
+            </div>
+            <div class="price-stockball">
+                <span class="stock">IN STOCK</span>
+                <span class="price">₹75.00</span>
+            </div>
+            <div class="free-shippingball">Free Shipping</div>
+            <div class="quantity-selectorball">
+                <span class="quantity-labelball">Quantity</span>
+                <div class="quantity-inputball">
+                    <button>-</button>
+                    <input type="number" value="1" min="1">
+                    <button>+</button>
+                </div>
+            </div>
+            <div class="add-to-cart-areaball">
+                <button class="add-to-cart-buttonball">
+                    Add To Cart
+                    <div class="add-to-cart-popupball">Added to cart!</div>
+                </button>
+                <button class="wishlist-buttonball"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="free-shipping-noteball">- Free Shipping On Orders ₹100+</div>
+        </div>
+    </div>
+
+    <div class="free-shipping-popupball">
+        <button onclick="document.querySelector('.free-shipping-popupball').classList.remove('show')">&times;</button>
+        Enjoy free shipping on all orders!
+    </div>
+
+</div>
+<div class="textcontainer opacity-0 translate-y-5 transition duration-700" id="textContainer">
+    <div class="detail-section">
+        <h2 style="color:black">Detail :</h2>
+        <p>Elevate your game with our high-performance football, designed for players of all levels. Crafted with precision and durability in mind, this football is perfect for both casual play and intense matches.</p>
+    </div>
+
+    <div class="key-features-section">
+        <h2>Key Features:</h2>
+        <ul class="key-features-list">
+            <li><strong>Superior Grip & Control:</strong> Its textured surface ensures a firm grip, allowing for better ball control, accuracy, and ease in dribbling and passing.</li>
+            <li><strong>Durability:</strong> Made with high-quality synthetic materials, this football is built to withstand rough play on various surfaces, whether on grass, turf, or indoor courts.</li>
+            <li><strong>Optimal Shape and Bounce:</strong> Engineered to maintain a perfect round shape and consistent bounce, making it ideal for training or match play.</li>
+            <li><strong>Vibrant Design:</strong> With a bold and stylish design, this football stands out on the field, combining both functionality and visual appeal.</li>
+        </ul>
+        <p>Whether you're a professional, a weekend player,</p>
+    </div>
+
+    <div class="reviews-section">
+        <h2>Reviews</h2>
+        <div class="reviews-header">
+            <span class="rating-value">4.2</span>
+            <span class="review-count">— 54 Reviews</span>
+        </div>
+        <button class="write-review-button">Write a review</button>
+    </div>
+</div>
+
+<div class="reviewcontainer opacity-0 transition duration-700" id="reviewContainer">
+    <div class="review transform hover:scale-105 opacity-0 translate-y-5" id="review1">
+        <div class="profile-image">
+            <img src="Sports Equipment/0girl.jpeg" alt="Emily Davis">
+        </div>
+        <div class="review-details">
+            <div class="reviewer-name">Emily Davis</div>
+            <div class="review-date">1 Week ago</div>
+            <div class="review-text">This company always goes above and beyond to satisfy their customers.</div>
+        </div>
+        <div class="rating">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+        </div>
+    </div>
+
+    <div class="review transform hover:scale-105 opacity-0 translate-y-5" id="review2">
+        <div class="profile-image">
+            <img src="Sports Equipment/0boy.jpeg" alt="Daniel Smith">
+        </div>
+        <div class="review-details">
+            <div class="reviewer-name">Daniel Smith</div>
+            <div class="review-date">2 Months ago</div>
+            <div class="review-text">I can't believe how affordable and high-quality this item is!</div>
+        </div>
+        <div class="rating">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+        </div>
+    </div>
+</div>
+<div class="similar">
+    <h2>You might also like</h2>
+    <h1 class="products">SIMILAR PRODUCTS</h1>
+    <div id="equipmentfoot" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <section class="equipmentfoot">
+            <div class="check bg-white shadow-md overflow-hidden rounded-lg">
+                <div class="aspect-w-4 aspect-h-3">
+                    <img class="w-full h-full object-cover rounded-t-lg" src="sports equipments part 3\sports (30).png" alt="Orange grip shoe">
+                </div>
+                <div class="p-4 flex-container">
+                    <div class="left">
+                        <h3 class="text-gray-900 font-semibold mb-2 text-center text-sm">Orange grip shoe</h3>
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="bg-green-500 rounded-full w-2 h-2 mr-1 flex-shrink-0"></span>
+                            <span class="text-gray-700 text-xs rounded-full px-2 py-1 bg-green-100 ml-1" style="border: 1px solid black; padding: 4px;text-align: center;">In Stock</span>
+              </div>
+              <p class="text-gray-900 font-bold mb-2 text-center text-sm">₹35.00</p>
+              <p class="text-green-500 mb-4 text-center text-xs">Free Shipping</p>
+            </div>
+            <div class="right">
+                <a href="cart.html">
+                    <button class="bg-black text-white rounded-md px-3 py-1 font-semibold text-xs hover:bg-gray-800 transition-colors duration-200">
+                      Buy Now
+                    </button>
+                  </a>
+              <button class="bg-blue-500 text-white rounded-md px-3 py-1 font-semibold text-xs hover:bg-blue-700 transition-colors duration-200">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="equipmentfoot">
+        <div class="check bg-white shadow-md overflow-hidden rounded-lg">
+          <div class="aspect-w-4 aspect-h-3">
+            <img class="w-full h-full object-cover rounded-t-lg" src="sports equipments part 2\sports (96).png" alt="Three footballs same price">
+          </div>
+          <div class="p-4 flex-container">
+            <div class="left">
+              <h3 class="text-gray-900 font-semibold mb-2 text-center text-sm">Three footballs same price</h3>
+              <div class="flex items-center justify-center mb-2">
+                <span class="bg-green-500 rounded-full w-2 h-2 mr-1 flex-shrink-0"></span>
+                <span class="text-gray-700 text-xs rounded-full px-2 py-1 bg-green-100 ml-1" style="border: 1px solid black; padding: 4px;text-align: center;">In Stock</span>
+              </div>
+              <p class="text-gray-900 font-bold mb-2 text-center text-sm">₹35.00</p>
+              <p class="text-green-500 mb-4 text-center text-xs">Free Shipping</p>
+            </div>
+            <div class="right">
+                <a href="cart.html">
+                    <button class="bg-black text-white rounded-md px-3 py-1 font-semibold text-xs hover:bg-gray-800 transition-colors duration-200">
+                      Buy Now
+                    </button>
+                  </a>
+              <button class="bg-blue-500 text-white rounded-md px-3 py-1 font-semibold text-xs hover:bg-blue-700 transition-colors duration-200">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="equipmentfoot">
+        <div class="check bg-white shadow-md overflow-hidden rounded-lg">
+          <div class="aspect-w-4 aspect-h-3">
+            <img class="w-full h-full object-cover rounded-t-lg" src="sports equipments part 3\Football.png" alt="Football premium finish">
+          </div>
+          <div class="p-4 flex-container">
+            <div class="left">
+              <h3 class="text-gray-900 font-semibold mb-2 text-center text-sm">Football premium finish</h3>
+              <div class="flex items-center justify-center mb-2">
+                <span class="bg-green-500 rounded-full w-2 h-2 mr-1 flex-shrink-0"></span>
+                <span class="text-gray-700 text-xs rounded-full px-2 py-1 bg-green-100 ml-1" style="border: 1px solid black; padding: 4px;text-align: center;">In Stock</span>
+              </div>
+              <p class="text-gray-900 font-bold mb-2 text-center text-sm">₹35.00</p>
+              <p class="text-green-500 mb-4 text-center text-xs">Free Shipping</p>
+            </div>
+            <div class="right">
+                <a href="cart.html">
+                    <button class="bg-black text-white rounded-md px-3 py-1 font-semibold text-xs hover:bg-gray-800 transition-colors duration-200">
+                      Buy Now
+                    </button>
+                  </a>
+              <button class="bg-blue-500 text-white rounded-md px-3 py-1 font-semibold text-xs hover:bg-blue-700 transition-colors duration-200">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="banner">
+    <div></div>
+    <div class="logo-container">
+        <img src="\sports equipments part 2\logo.png" alt="MK Sporting Logo" class="logo-image">
+        <span class="logo-text"></span>
+    </div>
+    <div class="bottom-bar"></div>
+</div>
+</div>
+<div class="check container-fluid p-0">
+<div class="row align-items-center m-0 ">
+    <div class="col-md-6 text-center text-md-left p-4 p-md-5">
+        <h2 class="deal-title">Deal Of The Day</h2>
+        <p class="deal-subtitle">GO...GET your Equipments on special offers only on mukesh equipment website</p>
+        <div class="countdown d-flex">
+            <div class="countdown-item">
+                <div id="days" class="font-weight-bold">03</div>
+                <small class="text-muted-light">Day</small>
+            </div>
+            <div class="countdown-item">
+                <div id="hours" class="font-weight-bold">08</div>
+                <small class="text-muted-light">Hour</small>
+            </div>
+            <div class="countdown-item">
+                <div id="minutes" class="font-weight-bold">09</div>
+                <small class="text-muted-light">Minute</small>
+            </div>
+        </div>
+        <button class="btn shop-now-btn rounded-0 shadow-sm" id="shopNowBtn">SHOP NOW</button>
+    </div>
+    <div class="col-md-6 p-4 d-none d-md-block">
+        <div class="image-stack">
+          <div class="back-card"></div>
+          <img src="\sports equipments part 3\sports (19).png" alt="Cristiano Ronaldo celebrating">
+          
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer-container">
+<div class="footer-section">
+    <h3>Equipment</h3>
+    <p>MK Sport, we specialize in designing and manufacturing sport equipment while creating bespoke training facilities.</p>
+    <p>Partnering with coaches, ground owners, and athletes, we enhance training spaces to elevate performance.</p>
+</div>
+<div class="footer-section">
+    <h3>Company</h3>
+    <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQs</a></li>
+    </ul>
+</div>
+<div class="footer-section">
+    <h3>Need Help?</h3>
+    <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Shipping Services</a></li>
+        <li><a href="#">Payment Options</a></li>
+        <li><a href="#">Returns & Exchanges</a></li>
+        <li><a href="#">Unsubscribe</a></li>
+    </ul>
+</div>
+<div class="footer-section">
+    <h3>Follow Us</h3>
+    <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Snapchat</a></li>
+        <li><a href="#">Pinterest</a></li>
+    </ul>
+</div>
+</div>
+
+<div class="copyright">
+Copyright @ Mukesh2025. All Rights Reserved.
+</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const quantityInput = document.querySelector('.quantity-inputball input[type="number"]');
+      const minusButton = document.querySelector('.quantity-inputball button:first-child');
+      const plusButton = document.querySelector('.quantity-inputball button:last-child');
+      const addToCartButton = document.querySelector('.add-to-cart-buttonball');
+      const addToCartPopup = document.querySelector('.add-to-cart-popupball');
+      const wishlistButton = document.querySelector('.wishlist-buttonball');
+      const freeShipping = document.querySelector('.free-shippingball');
+      const freeShippingPopup = document.querySelector('.free-shipping-popupball');
+
+      minusButton.addEventListener('click', () => {
+        let value = parseInt(quantityInput.value);
+        if (value > 1) quantityInput.value = value - 1;
+      });
+
+      plusButton.addEventListener('click', () => {
+        let value = parseInt(quantityInput.value);
+        quantityInput.value = value + 1;
+      });
+
+      addToCartButton.addEventListener('click', () => {
+        addToCartPopup.classList.add('show');
+        setTimeout(() => addToCartPopup.classList.remove('show'), 2000);
+      });
+
+      wishlistButton.addEventListener('click', () => {
+        wishlistButton.classList.toggle('active');
+      });
+
+      freeShipping.addEventListener('click', () => {
+        freeShippingPopup.classList.add('show');
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerBtn = document.getElementById("hamburger-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeMenuBtn = document.getElementById("close-menu-btn");
+            const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+            function toggleMobileMenu() {
+                mobileMenu.classList.remove("hidden");
+                setTimeout(() => {
+                    mobileMenu.classList.toggle("translate-x-full");
+                }, 10); // allow DOM paint
+            }
+
+            hamburgerBtn.addEventListener("click", toggleMobileMenu);
+            closeMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+                setTimeout(() => {
+                    mobileMenu.classList.add("hidden");
+                }, 500); // match duration
+            });
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("translate-x-full");
+                    setTimeout(() => {
+                        mobileMenu.classList.add("hidden");
+                    }, 500);
+                });
+            });
+
+            // Animate header on page load
+            const mainHeader = document.getElementById("main-header");
+            setTimeout(() => {
+                mainHeader.classList.remove("-translate-y-10", "opacity-0");
+                mainHeader.classList.add("translate-y-0", "opacity-100");
+            }, 100);
+        });
+// sticky header
+const header = document.getElementById('main-header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('bg-gray-900', 'bg-opacity-40', 'shadow-md');
+        header.classList.remove('bg-transparent');
+    } else {
+        header.classList.remove('bg-gray-800', 'bg-opacity-40', 'shadow-md');
+        header.classList.add('bg-transparent');
+    }
+});
+// footer
+  // FOOTER
+  function updateCountdown() {
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 3);
+      targetDate.setHours(8, 9, 59, 999);
+
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+      document.getElementById('days').innerText = String(days).padStart(2, '0');
+      document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+
+      if (difference < 0) {
+        clearInterval(countdownInterval);
+        document.querySelector('.countdown').innerHTML = '<div class="text-danger">Deal Ended!</div>';
+      }
+    }
+
+    document.getElementById('shopNowBtn').onclick = function () {
+      window.location.href = 'equipment.html';
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown()
+    window.addEventListener('DOMContentLoaded', () => {
+  const textContainer = document.getElementById('textContainer');
+  const reviewContainer = document.getElementById('reviewContainer');
+  const reviews = document.querySelectorAll('.review');
+
+  // Show main text content
+  textContainer.classList.remove('opacity-0', 'translate-y-5');
+
+  // Show review container
+  reviewContainer.classList.remove('opacity-0');
+
+  // Animate each individual review
+  reviews.forEach((review, index) => {
+    setTimeout(() => {
+      review.classList.remove('opacity-0', 'translate-y-5');
+    }, index * 200); // stagger the animation for a nicer effect
+  });
+});
+document.querySelectorAll('.bg-black-500').forEach(button => {
+    button.addEventListener('click', () => {
+      alert("Cart added successfully!");
+    });
+  });
+
+  </script>
+</body>
+</html>

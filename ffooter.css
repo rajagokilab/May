@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Inter', sans-serif;
+  
+  }
+  
+          /* FOOTER */
+       .logobarfoot {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 20px 0;
+        width: 100%;
+      }
+  
+      .bannerfoot {
+        width: 100%;
+        max-width: 900px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      .bottom-barfoot {
+        background-color: #343a40;
+        height: 10px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+  
+      .logofoot-image {
+        height: 30px;
+        margin-right: 5px;
+      }
+  
+      .image-stack {
+        position: relative;
+        animation: fadeIn 1s ease-in-out;
+        max-width: 100%;
+      }
+  
+      .image-stack img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: #060606;
+      }
+  
+      .back-cardfoot {
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        background-color: #5a5959;
+        width: 80%;
+        height: 100%;
+        z-index: -1;
+      }
+  
+      .checkfoot {
+        background-color: #a1c8f2;
+        font-size: 30px;
+        animation: slideIn 1s ease-in-out;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+  
+      .row {
+        margin: 0;
+      }
+  
+      .col-md-6 {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+  
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px 20px;
+        background-color: #001f3f;
+        font-family: sans-serif;
+        color: #ffffff;
+        animation: fadeInUp 2s ease-in-out;
+      }
+  
+      .footer-section {
+        flex: 1 1 250px;
+        margin: 20px;
+        max-width: 300px;
+      }
+  
+      .footer-section h3 {
+        color: #f5f7f5;
+        margin-bottom: 15px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+  
+      .footer-section p,
+      .footer-section ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1.6;
+        font-size: 18px;
+        color: rgb(171, 168, 168);
+      }
+  
+      .footer-section ul li {
+        margin-bottom: 8px;
+      }
+  
+      .footer-section a {
+        color: rgb(171, 168, 168);
+        text-decoration: none;
+      }
+  
+      .footer-section a:hover {
+        color: #ffffff;
+      }
+  
+      .copyright {
+        background-color: #001f3f;
+        color: rgb(171, 168, 168);
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        border-top: 1px solid #c9dbed;
+        width: 100%;
+      }
+  
+      .deal-title {
+        color: #001f3f;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 3.5rem;
+        animation: slideInLeft 1s ease-in-out;
+        text-align: center;
+      }
+  
+      .deal-subtitle {
+        color: #001f3f;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        animation: slideInRight 1s ease-in-out;
+        text-align: center;
+      }
+  
+      .countdown {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+  
+      .countdown-item {
+        background-color: #001f3f;
+        border-radius: 10px;
+        color: #fff;
+        padding: 15px 20px;
+        text-align: center;
+        min-width: 80px;
+        animation: zoomIn 0.5s ease-in-out;
+      }
+  
+      .countdown-item .font-weight-bold {
+        font-size: 2rem;
+        color: white;
+        animation: pulseNumber 1s infinite alternate;
+      }
+  
+      .countdown-item small {
+        color: #adb5bd;
+        display: block;
+        font-size: 0.9rem;
+      }
+  
+      .shop-now-btn {
+        background-color: #001122;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.5s ease;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+        animation: pulse 1s infinite alternate;
+      }
+  
+      .shop-now-btn:hover {
+        background-color: #f1f4f7;
+        color: #001122;
+      }
+  
+      @media (max-width: 768px) {
+        .text-md-left {
+          text-align: center !important;
+        }
+  
+        .col-md-6:first-child {
+          padding-bottom: 20px;
+        }
+      }
+  
+      /* Keyframes */
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes zoomIn {
+        from {
+          transform: scale(1);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes pulse {
+        0% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+  
+      @keyframes pulseNumber {
+        0% {
+          transform: scale(1.4);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+  
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+     .image-stack  {
+        animation: fadeIn 1.5s ease-in-out;
+      }

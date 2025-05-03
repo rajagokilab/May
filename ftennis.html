@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKsport tennis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="sports equipments part 2\sports (56).png" style="border-radius: 50%;">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="ffooter.css">
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Initial styles for header animation */
+        #main-header {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /* Mobile menu slide animation */
+        #mobile-menu {
+            transition: transform 0.5s ease;
+        }
+
+        /* Keyframes for blinking animation */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Apply blinking animation to Shop Sale button */
+        .blink {
+            animation: blink 1s infinite;
+        }
+ .main-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    background-image: url('Sports Equipment/sports (15).png');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Lora", serif;
+    cursor: pointer;
+    transition: background-size 0.3s ease, background-position 0.3s ease;
+    padding: 20px; /* Add padding to the container */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        background-size: cover;
+        background-position: center;
+        /* min-height: 75vh; */
+        justify-content: center; /* Center content on smaller screens */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        justify-content: center; /* Center content on mobile */
+        align-items: center;
+    }
+}
+.content-wrapper {
+    color: white;
+    padding: 20px;
+    border-radius: 0;
+    text-align: center;
+    max-width: 100%; /* Make content width responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Allow items to wrap to multiple lines */
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+    animation: slideInLeft 1s ease-out;
+    width: 100%; /* Make stats container width responsive */
+}
+
+.stat-item {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1 1 auto; /* Allow items to grow and shrink */
+    min-width: 100px; /* Ensure a minimum width for each item */
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+}
+
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align:center;
+            background-color: black;
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .stat-labels{
+            font-size: 20px;
+            font-weight: normal;
+            color: black;
+            text-align: center;
+        }
+        .stat-item:hover, .stat-items:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+              /* equipments */
+              .flex{
+            display: flex;
+            justify-content: space-around;
+            font-size: 10px;
+            
+          }
+          .check{
+            font-size: 15px;
+            /* margin: 50px; */
+          
+          }
+          #equipmentfoot{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin-right:0px;
+
+          }
+        
+          .heder{
+            font-family:'Times New Roman', Times, serif;
+            font-size: 3rem;
+            padding: 20px;
+          }
+          /* -------------------- RESPONSIVE DESIGN -------------------- */
+
+/* For tablets and smaller (below 992px) */
+@media (max-width: 991px) {
+  .main-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .stats-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .stat-item {
+      margin: 10px 0;
+      font-size: 16px;
+  }
+
+  .flex {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  #equipmentfoot {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .title {
+      font-size: 40px;
+      width: 100%;
+  }
+}
+
+/* For mobile (below 480px) */
+@media (max-width: 480px) {
+  .main-container {
+      padding: 10px;
+  }
+
+  .stats-container {
+      padding: 10px;
+  }
+
+  .stat-item {
+      font-size: 14px;
+  }
+
+  .flex {
+      gap: 8px;
+  }
+
+  #equipmentfoot {
+      gap: 8px;
+  }
+
+  .title {
+      font-size: 30px;
+      width: 90%;
+      padding: 15px;
+  }
+
+  .heder {
+      font-size: 2rem;
+  }
+}
+    /* FOOTER */
+    .logobarfoot {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 20px 0;
+        width: 100%;
+      }
+  
+      .bannerfoot {
+        width: 100%;
+        max-width: 900px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      .bottom-barfoot {
+        background-color: #343a40;
+        height: 10px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+  
+      .logofoot-image {
+        height: 30px;
+        margin-right: 5px;
+      }
+  
+      .image-stack {
+        position: relative;
+        animation: fadeIn 1s ease-in-out;
+        max-width: 100%;
+      }
+  
+      .image-stack img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: #060606;
+      }
+  
+      .back-cardfoot {
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        background-color: #5a5959;
+        width: 80%;
+        height: 100%;
+        z-index: -1;
+      }
+  
+      .checkfoot {
+        background-color: #a1c8f2;
+        font-size: 30px;
+        animation: slideIn 1s ease-in-out;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+  
+      .row {
+        margin: 0;
+      }
+  
+      .col-md-6 {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+  
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px 20px;
+        background-color: #001f3f;
+        font-family: sans-serif;
+        color: #ffffff;
+        animation: fadeInUp 2s ease-in-out;
+      }
+  
+      .footer-section {
+        flex: 1 1 250px;
+        margin: 20px;
+        max-width: 300px;
+      }
+  
+      .footer-section h3 {
+        color: #f5f7f5;
+        margin-bottom: 15px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+  
+      .footer-section p,
+      .footer-section ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1.6;
+        font-size: 18px;
+        color: rgb(171, 168, 168);
+      }
+  
+      .footer-section ul li {
+        margin-bottom: 8px;
+      }
+  
+      .footer-section a {
+        color: rgb(171, 168, 168);
+        text-decoration: none;
+      }
+  
+      .footer-section a:hover {
+        color: #ffffff;
+      }
+  
+      .copyright {
+        background-color: #001f3f;
+        color: rgb(171, 168, 168);
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        border-top: 1px solid #c9dbed;
+        width: 100%;
+      }
+  
+      .deal-title {
+        color: #001f3f;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 3.5rem;
+        animation: slideInLeft 1s ease-in-out;
+        text-align: center;
+      }
+  
+      .deal-subtitle {
+        color: #001f3f;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        animation: slideInRight 1s ease-in-out;
+        text-align: center;
+      }
+  
+      .countdown {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+  
+      .countdown-item {
+        background-color: #001f3f;
+        border-radius: 10px;
+        color: #fff;
+        padding: 15px 20px;
+        text-align: center;
+        min-width: 80px;
+        animation: zoomIn 0.5s ease-in-out;
+      }
+  
+      .countdown-item .font-weight-bold {
+        font-size: 2rem;
+        color: white;
+        animation: pulseNumber 1s infinite alternate;
+      }
+  
+      .countdown-item small {
+        color: #adb5bd;
+        display: block;
+        font-size: 0.9rem;
+      }
+  
+      .shop-now-btn {
+        background-color: #001122;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.5s ease;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+        animation: pulse 1s infinite alternate;
+      }
+  
+      .shop-now-btn:hover {
+        background-color: #f1f4f7;
+        color: #001122;
+      }
+  
+      @media (max-width: 768px) {
+        .text-md-left {
+          text-align: center !important;
+        }
+  
+        .col-md-6:first-child {
+          padding-bottom: 20px;
+        }
+      }
+  
+      /* Keyframes */
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes zoomIn {
+        from {
+          transform: scale(1);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+  
+      @keyframes pulse {
+        0% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+  
+      @keyframes pulseNumber {
+        0% {
+          transform: scale(1.4);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+  
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+     .image-stack  {
+        animation: fadeIn 1.5s ease-in-out;
+      }
+</style>
+<header id="main-header" class="bg-transparent py-8 fixed top-0 left-0 w-full z-10 transition-all duration-500 transform -translate-y-10 opacity-0">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="logo ml-0">
+            <a href="fhome.html" class="flex items-center">
+                <img src="sports equipments part 2\logo.png" alt="MK Sport Inc. Logo" class="mr-2 h-17">
+            </a>
+        </div>
+        <nav class="hidden md:block bg-black bg-opacity-70 rounded-md px-6 py-2 mt-0 ml-auto mr-4">
+            <ul class="flex items-center space-x-9">
+                <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                <li><a href="fabout.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-btn" class="md:hidden text-blue-600 focus:outline-none" aria-label="Toggle Navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 transform translate-x-full">
+    <div class="bg-gray-900 w-80 h-full absolute right-0 p-6">
+        <div class="flex justify-end mb-4">
+            <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="block">
+            <ul class="space-y-8">
+                <li><a href="fequipment.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Equipments</a></li>
+                <li><a href="fcart.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">Cart</a></li>
+                <li><a href="fabout.html" class="block text-gray-300 hover:text-white text-lg transition duration-300 no-underline hover:no-underline transform hover:scale-105">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="main-container">
+    <div class="content-wrapper">
+        <h1 class="title">Tennis</h1>
+        <div class="stats-container">
+            <div class="stat-item">
+                <div>680</div>
+                <div class="stat-label">Award Winning</div>
+            </div>
+            <div class="stat-item">
+                <div>8K+</div>
+                <div class="stat-label">Happy Customer</div>
+            </div>
+            <div class="stat-item">
+                <div>500+</div>
+                <div class="stat-label">Equipments Ready</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="heder">
+  <h2>Tennis Equipments</h2>
+</div>
+<div id="equipmentfoot">
+<section class="equipmentfoot">
+ 
+  <!-- 1strow -->
+  <div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+      <div class="aspect-w-4 aspect-h-3">
+          <!-- w-full h-full object-cover -->
+          <img class="w-full h-full object-cover" src="Sports Equipment\sports (118).png" alt="Classic Football">
+      </div>
+  <div class="flex">
+    <div class="left">
+         <div class="px-6 py-4">
+          
+          <h3 class="text-gray-900 font-bold mb-2 text-center">Classic Football</h3>
+          <div class="flex items-center mb-2 justify-center">
+              <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+              <span class="text-gray-700 ">In Stock</span>
+          </div>
+          <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+          <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+        </div>
+      </div>
+     <div class="right">
+          <div class="flex flex-col  space-y-5 p-6">
+              <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+                  Buy Now
+              </button>
+              <button onclick="addToCart()"class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+                  Add To Cart
+              </button>
+          </div>
+        </div>
+      </div>
+        <!-- 2ndrow -->
+         
+</section>
+<section class="equipmentfoot">
+<div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+  <div class="aspect-w-4 aspect-h-3">
+      <!-- w-full h-full object-cover -->
+      <img class="w-full h-full object-cover" src="sports equipments part 2\sports (73).png" alt="Classic Football">
+  </div>
+<div class="flex">
+<div class="left">
+     <div class="px-6 py-4">
+      
+      <h3 class="text-gray-900 font-bold mb-2 text-center"> Football net</h3>
+      <div class="flex items-center mb-2 justify-center">
+          <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+          <span class="text-gray-700 ">In Stock</span>
+      </div>
+      <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+      <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+    </div>
+  </div>
+ <div class="right">
+      <div class="flex flex-col  space-y-5 p-6">
+          <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+              Buy Now
+          </button>
+          <button onclick="addToCart()" class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+              Add To Cart
+          </button>
+      </div>
+    </div>
+</section>
+
+<section class="equipmentfoot">
+<div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+  <div class="aspect-w-4 aspect-h-3">
+      <!-- w-full h-full object-cover -->
+      <img class="w-full h-full object-cover" src="sports equipments part 2\sports (78).png" alt="Classic Football">
+  </div>
+<div class="flex">
+<div class="left">
+     <div class="px-6 py-4">
+      
+      <h3 class="text-gray-900 font-bold mb-2 text-center">sport Football shoes</h3>
+      <div class="flex items-center mb-2 justify-center">
+          <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+          <span class="text-gray-700 ">In Stock</span>
+      </div>
+      <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+      <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+    </div>
+  </div>
+ <div class="right">
+      <div class="flex flex-col  space-y-5 p-6">
+          <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+              Buy Now
+          </button>
+          <button onclick="addToCart()" class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+              Add To Cart
+          </button>
+      </div>
+  </div>
+</section>
+</div>
+<div id="equipmentfoot">
+<section class="equipmentfoot">
+ 
+  <!-- 1strow -->
+  <div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+      <div class="aspect-w-4 aspect-h-3">
+          <!-- w-full h-full object-cover -->
+          <img class="w-full h-full object-cover" src="Sports Equipment\sports (32).png" alt="Classic Football">
+      </div>
+  <div class="flex">
+    <div class="left">
+         <div class="px-6 py-4">
+          
+          <h3 class="text-gray-900 font-bold mb-2 text-center">Shoe with ball combo</h3>
+          <div class="flex items-center mb-2 justify-center">
+              <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+              <span class="text-gray-700 ">In Stock</span>
+          </div>
+          <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+          <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+        </div>
+      </div>
+     <div class="right">
+          <div class="flex flex-col  space-y-5 p-6">
+              <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+                  Buy Now
+              </button>
+              <button onclick="addToCart()" class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+                  Add To Cart
+              </button>
+          </div>
+        </div>
+      </div>
+        <!-- 2ndrow -->
+         
+</section>
+<section class="equipmentfoot">
+<div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+  <div class="aspect-w-4 aspect-h-3">
+      <!--  -->
+      <img class="w-full h-full object-cover" src="sports equipments part 2\sports (35).png" alt="Classic Football">
+  </div>
+<div class="flex">
+<div class="left">
+     <div class="px-6 py-4">
+      
+      <h3 class="text-gray-900 font-bold mb-2 text-center">Classic Football full combo set</h3>
+      <div class="flex items-center mb-2 justify-center">
+          <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+          <span class="text-gray-700 ">In Stock</span>
+      </div>
+      <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+      <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+    </div>
+  </div>
+ <div class="right">
+      <div class="flex flex-col  space-y-5 p-6">
+          <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+              Buy Now
+          </button>
+          <button onclick="addToCart()" class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+              Add To Cart
+          </button>
+      </div>
+    </div>
+</section>
+
+<section class="equipmentfoot">
+<div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+  <div class="aspect-w-4 aspect-h-3">
+      <!-- w-full h-full object-cover -->
+      <img class="" src="sports equipments part 2\sports (38).png" alt="Classic Football">
+  </div>
+<div class="flex">
+<div class="left">
+     <div class="px-6 py-4">
+      
+      <h3 class="text-gray-900 font-bold mb-2 text-center">Classic black and white football</h3>
+      <div class="flex items-center mb-2 justify-center">
+          <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+          <span class="text-gray-700 ">In Stock</span>
+      </div>
+      <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+      <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+    </div>
+  </div>
+ <div class="right">
+      <div class="flex flex-col  space-y-5 p-6">
+          <button onclick="buyNow()"class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+              Buy Now
+          </button>
+          <button onclick="addToCart()" class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+              Add To Cart
+          </button>
+      </div>
+  </div>
+</section>
+</div>
+<div id="equipmentfoot">
+<section class="equipmentfoot">
+ 
+  <!-- 1strow -->
+  <div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+      <div class="aspect-w-4 aspect-h-3">
+          <!-- w-full h-full object-cover -->
+          <img class="w-full h-full object-cover" src="sports equipments part 2\sports (36).png" alt="Classic Football">
+      </div>
+  <div class="flex">
+    <div class="left">
+         <div class="px-6 py-4">
+          
+          <h3 class="text-gray-900 font-bold mb-2 text-center">Orange grip shoe</h3>
+          <div class="flex items-center mb-2 justify-center">
+              <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+              <span class="text-gray-700 ">In Stock</span>
+          </div>
+          <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+          <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+        </div>
+      </div>
+     <div class="right">
+          <div class="flex flex-col  space-y-5 p-6">
+              <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+                  Buy Now
+              </button>
+              <button onclick="addToCart()" class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+                  Add To Cart
+              </button>
+          </div>
+        </div>
+      </div>
+        <!-- 2ndrow -->
+         
+</section>
+<section class="equipmentfoot">
+<div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+  <div class="aspect-w-4 aspect-h-3">
+      <!-- w-full h-full object-cover -->
+      <img class="w-full h-full object-cover" src="sports equipments part 2\sports (126).png" alt="Classic Football">
+  </div>
+<div class="flex">
+<div class="left">
+     <div class="px-6 py-4">
+      
+      <h3 class="text-gray-900 font-bold mb-2 text-center">Three footballs same price</h3>
+      <div class="flex items-center mb-2 justify-center">
+          <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+          <span class="text-gray-700 ">In Stock</span>
+      </div>
+      <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+      <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+    </div>
+  </div>
+ <div class="right">
+      <div class="flex flex-col  space-y-5 p-6">
+          <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+              Buy Now
+          </button>
+          <button onclick="addToCart()"class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+              Add To Cart
+          </button>
+      </div>
+    </div>
+</section>
+
+<section class="equipmentfoot">
+<div class=" check bg-white shadow-md overflow-hidden max-w-sm w-full ">
+  <div class="aspect-w-4 aspect-h-3">
+      <!-- w-full h-full object-cover -->
+      <img class="w-full h-full object-cover" src="sports equipments part 2\sports (72).png" alt="Classic Football">
+  </div>
+<div class="flex">
+<div class="left">
+     <div class="px-6 py-4">
+      
+      <h3 class="text-gray-900 font-bold mb-2 text-center">Football premium finish</h3>
+      <div class="flex items-center mb-2 justify-center">
+          <span class="bg-green-500 rounded-full w-3 h-3 mr-2"></span>
+          <span class="text-gray-700 ">In Stock</span>
+      </div>
+      <p class="text-gray-900  font-bold mb-4 text-center">₹35.00</p>
+      <p class="text-green-500  mb-4 text-center">Free Shipping</p>
+    </div>
+  </div>
+ <div class="right">
+      <div class="flex flex-col  space-y-5 p-6">
+          <button onclick="buyNow()" class="bg-black text-white rounded-md px-4 py-2 font-semibold hover:bg-gray-800 transition-colors duration-200  ">
+              Buy Now
+          </button>
+          <button onclick="addToCart()" class="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-700 transition-colors duration-200 ">
+              Add To Cart
+          </button>
+      </div>
+  </div>
+</section>
+</div>
+
+ <!-- footer -->
+ <div class="logobarfoot">
+    <div class="bannerfoot">
+      <div></div>
+      <div class="logofoot-containerfoot">
+        <img src="\sports equipments part 2\logo.png" alt="MK Sporting Logo" class="logofoot-image">
+        <span class="logofoot-text"></span>
+      </div>
+      <div class="bottom-barfoot"></div>
+    </div>
+  </div>
+  
+  <div class="checkfoot container-fluid p-0">
+    <div class="row align-items-center m-0">
+      <div class="col-md-6 text-center text-md-left p-4 p-md-5">
+        <h2 class="deal-title">Deal Of The Day</h2>
+        <p class="deal-subtitle">GO...GET your Equipments on special offers only on mukesh equipment website</p>
+        <div class="countdown d-flex justify-content-center">
+          <div class="countdown-item">
+            <div id="days" class="font-weight-bold">03</div>
+            <small class="text-muted-light">Day</small>
+          </div>
+          <div class="countdown-item">
+            <div id="hours" class="font-weight-bold">08</div>
+            <small class="text-muted-light">Hour</small>
+          </div>
+          <div class="countdown-item">
+            <div id="minutes" class="font-weight-bold">09</div>
+            <small class="text-muted-light">Minute</small>
+          </div>
+        </div>
+        <button class="btn shop-now-btn rounded-0 shadow-sm" id="shopNowBtn">SHOP NOW</button>
+      </div>
+      <div class="col-md-6 p-4">
+        <div class="image-stack">
+          <div class="back-cardfoot"></div>
+          <img src="\sports equipments part 3\sports (19).png" alt="Cristiano Ronaldo celebrating" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Equipment</h3>
+      <p>MK Sport, we specialize in designing and manufacturing sport equipment while creating bespoke training facilities.</p>
+      <p>Partnering with coaches, ground owners, and athletes, we enhance training spaces to elevate performance.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="fabout.html">About us</a></li>
+        <li><a href="fabout.html">Blog</a></li>
+        <li><a href="fabout.html">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Need Help?</h3>
+      <ul>
+        <li><a href="fabout.html">Contact Us</a></li>
+        <li><a href="fabout.html">Shipping Services</a></li>
+        <li><a href="fcart.html">Payment Options</a></li>
+        <li><a href="fcart.html">Returns & Exchanges</a></li>
+        <li><a href="fcart.html">Unsubscribe</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="fhome.html">Instagram</a></li>
+        <li><a href="fhome.html">Facebook</a></li>
+        <li><a href="fhome.html">Twitter</a></li>
+        <li><a href="fhome.html">Snapchat</a></li>
+        <li><a href="fhome.html">Pinterest</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="copyright">
+    Copyright @ Mukesh2025. All Rights Reserved.
+  </div>
+<script>
+
+    // head
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.remove("hidden");
+            setTimeout(() => {
+                mobileMenu.classList.toggle("translate-x-full");
+            }, 10); // allow DOM paint
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+            setTimeout(() => {
+                mobileMenu.classList.add("hidden");
+            }, 500); // match duration
+        });
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+                setTimeout(() => {
+                    mobileMenu.classList.add("hidden");
+                }, 500);
+            });
+        });
+
+        // Animate header on page load
+        const mainHeader = document.getElementById("main-header");
+        setTimeout(() => {
+            mainHeader.classList.remove("-translate-y-10", "opacity-0");
+            mainHeader.classList.add("translate-y-0", "opacity-100");
+        }, 100);
+    });
+// sticky header
+const header = document.getElementById('main-header');
+
+window.addEventListener('scroll', () => {
+if (window.scrollY > 50) {
+    header.classList.add('bg-gray-900', 'bg-opacity-40', 'shadow-md');
+    header.classList.remove('bg-transparent');
+} else {
+    header.classList.remove('bg-gray-800', 'bg-opacity-40', 'shadow-md');
+    header.classList.add('bg-transparent');
+}
+});
+// footer
+// FOOTER
+function updateCountdown() {
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 3);
+  targetDate.setHours(8, 9, 59, 999);
+
+  const now = new Date().getTime();
+  const difference = targetDate - now;
+
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById('days').innerText = String(days).padStart(2, '0');
+  document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+  document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+
+  if (difference < 0) {
+    clearInterval(countdownInterval);
+    document.querySelector('.countdown').innerHTML = '<div class="text-danger">Deal Ended!</div>';
+  }
+}
+
+document.getElementById('shopNowBtn').onclick = function () {
+  window.location.href = 'fequipment.html';
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+updateCountdown()
+
+function buyNow() {
+        window.location.href = 'fcart.html';
+    }
+
+    function addToCart() {
+        alert('Item successfully added to cart!');
+    }
+
+</script>
+</body>
+</html>
